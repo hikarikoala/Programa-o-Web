@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletor de Região</title>
+</head>
+<body>
+    <h1>Origem da sua jornada</h1>
+    <br>
+    <form>
+        <p>
+            <label for="origem"> Escolha sua região </label>
+            <select name="origem" id="origem">
+                <option value="Manacapuru">Manacapuru</option>
+                <option value="Norte">Norte</option>
+                <option value="Oeste">Oeste</option>
+                <option value="Sul">Sul</option>
+            </select>   
+        </p>
+        <h4> Escolha seu estilo de Treinamento </h4>
+        <div>
+            <input type="radio" id="Batalhador" name="estilo" value="Batalha" checked>
+            <label for="batalhador">Desafio de ginasio (lideres e liga) </label>
+            
+        </div>
+         <div>
+            <input type="radio" id="Batalhador" name="estilo" value="Batalha" checked>
+            <label for="batalhador">Coordenador Pokémon </label>
+            
+        </div>
+         <div>
+            <input type="radio" id="Criador" name="estilo" value="Criação" checked>
+            <label for="criador">Criador ou Pesquisador Pokémon </label>
+            
+        </div>
+        <br>
+        <fieldset><!-- agrupar campos relacionado ao formulario -->
+            <legend> Assistente de Batalhas </legend>
+            <p>
+                <input type="checkbox" id="estilo batalha" name="estilo de batalha" >
+                <label for="estilo de batalha">mode troca livre </label>
+            
+            </p>
+
+            <p>
+                <input type="checkbox" id="animações" name="animações" >
+                <label for="animações">exibir animações de golpe </label>
+            
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
