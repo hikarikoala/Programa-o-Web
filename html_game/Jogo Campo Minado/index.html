@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Campo Minado</title>
+</head>
+<body>
+    <div class=" game- container">
+        <h1> Campo Minado (HTML + CSS)  </h1>
+        <!-- CONTROLE DE PONTOS-->
+        <div class="score-board">Pontos:<span class="score"></span></div>
+       
+        <!--INPUT (ESCONDIDAS DA VISÃO DO JOGADOR)-->
+        <!-- 7 CASAS SEGURAS-->
+         <input type="checkbox" id="c1" class="safe">
+         <input type="checkbox" id="c2" class="safe">
+         <input type="checkbox" id="c3" class="safe">
+         <input type="checkbox" id="c4" class="safe">
+         <input type="checkbox" id="c5" class="safe">
+         <input type="checkbox" id="c6" class="safe">
+         <input type="checkbox" id="c7" class="safe">
+
+
+        <!-- 2 bombas-->
+        <input type="checkbox" id="b1" class="bomb">
+        <input type="checkbox" id="b2" class="bomb">
+
+
+        <!-- Tabuleiro 3x3-->
+        <div class="grid">
+            <label for="c1" class="tile"> tile</label>
+            <label for="b1" class="tile"> tile</label>
+            <label for="c2" class="tile"> tile</label>
+
+            <label for="c3" class="tile"> tile</label>
+            <label for="c4" class="tile"> tile</label>
+            <label for="c5" class="tile"> tile</label>
+
+            <label for="b2" class="tile"> tile</label>
+            <label for="c6" class="tile"> tile</label>
+            <label for="c7" class="tile"> tile</label>
+
+        </div>
+        <!-- Tela do fim do jogo -->
+         <div class="screen game-over">
+            <h2> 💣 BOOM! GAME OVER!!!</h2>
+            <a href=""class="btn-restart"> Tentar Novamente </a>
+            
+         </div>
+          <div class="screen game-over">
+            <h2>🏆 Vitória! Você Limpou o Campo! </h2>
+            <a href=""class="btn-restart"> Tentar Novamente </a>
+         </div>
+    </div>
+</body>
+</html>
