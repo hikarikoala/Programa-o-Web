@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,52 +7,49 @@
     <title>Campo Minado</title>
 </head>
 <body>
-    <div class=" game- container">
-        <h1> Campo Minado (HTML + CSS)  </h1>
-        <!-- CONTROLE DE PONTOS-->
-        <div class="score-board">Pontos:<span class="score"></span></div>
-       
-        <!--INPUT (ESCONDIDAS DA VISÃO DO JOGADOR)-->
-        <!-- 7 CASAS SEGURAS-->
-         <input type="checkbox" id="c1" class="safe">
-         <input type="checkbox" id="c2" class="safe">
-         <input type="checkbox" id="c3" class="safe">
-         <input type="checkbox" id="c4" class="safe">
-         <input type="checkbox" id="c5" class="safe">
-         <input type="checkbox" id="c6" class="safe">
-         <input type="checkbox" id="c7" class="safe">
+    <div class="game-container">
+        <h1>Campo Minado</h1>
 
+        <!-- INPUTS PRIMEIRO (para o seletor ~ funcionar em tudo) -->
+        <input type="checkbox" id="c1" class="safe">
+        <input type="checkbox" id="c2" class="safe">
+        <input type="checkbox" id="c3" class="safe">
+        <input type="checkbox" id="c4" class="safe">
+        <input type="checkbox" id="c5" class="safe">
+        <input type="checkbox" id="c6" class="safe">
+        <input type="checkbox" id="c7" class="safe">
 
-        <!-- 2 bombas-->
         <input type="checkbox" id="b1" class="bomb">
         <input type="checkbox" id="b2" class="bomb">
 
+        <!-- PLACAR -->
+        <div class="score-board">Pontos: <span class="score"></span></div>
 
-        <!-- Tabuleiro 3x3-->
+        <!-- TABULEIRO -->
         <div class="grid">
-            <label for="c1" class="tile"> tile</label>
-            <label for="b1" class="tile"> tile</label>
-            <label for="c2" class="tile"> tile</label>
+            <label for="c1" class="tile"></label>
+            <label for="b1" class="tile"></label>
+            <label for="c2" class="tile"></label>
 
-            <label for="c3" class="tile"> tile</label>
-            <label for="c4" class="tile"> tile</label>
-            <label for="c5" class="tile"> tile</label>
+            <label for="c3" class="tile"></label>
+            <label for="c4" class="tile"></label>
+            <label for="c5" class="tile"></label>
 
-            <label for="b2" class="tile"> tile</label>
-            <label for="c6" class="tile"> tile</label>
-            <label for="c7" class="tile"> tile</label>
-
+            <label for="b2" class="tile"></label>
+            <label for="c6" class="tile"></label>
+            <label for="c7" class="tile"></label>
         </div>
-        <!-- Tela do fim do jogo -->
-         <div class="screen game-over">
-            <h2> 💣 BOOM! GAME OVER!!!</h2>
-            <a href=""class="btn-restart"> Tentar Novamente </a>
-            
-         </div>
-          <div class="screen game-over">
-            <h2>🏆 Vitória! Você Limpou o Campo! </h2>
-            <a href=""class="btn-restart"> Tentar Novamente </a>
-         </div>
+
+        <!-- TELAS DE FIM DE JOGO -->
+        <div class="screen screen-lose">
+            <h2>💥 BOOM! Fim de jogo</h2>
+            <a href="" class="btn-restart">Tentar Novamente</a>
+        </div>
+
+        <div class="screen screen-win">
+            <h2>⭐ Vitória! Campo limpo!</h2>
+            <a href="" class="btn-restart">Jogar de Novo</a>
+        </div>
     </div>
 </body>
 </html>
