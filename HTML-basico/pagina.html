@@ -1,0 +1,90 @@
+<!DOCTYPE html> <!-- avisa o navegador que este é um documento HTML5 -->
+
+<!-- <html> é a tag "raiz": todo o resto da página fica dentro dela -->
+<!-- lang="pt-br" diz ao navegador que o idioma da página é português -->
+<html lang="pt-br">
+<head>
+
+    <!-- meta charset garante que acentos (á, ã, ç...) apareçam corretos -->
+    <meta charset="UTF-8">
+
+    <!-- <title> é o texto que aparece na ABA do navegador, não na página -->
+    <title>Minha Página</title>
+
+    <!-- <link> conecta este HTML ao arquivo CSS externo chamado "estilo.css" -->
+    <!-- é assim que os dois arquivos "se falam" -->
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+<!-- <body> guarda TUDO que aparece visualmente na página -->
+<body>
+
+    <!-- <header> = cabeçalho da página (tag semântica: já indica "isso é o topo") -->
+    <header>
+
+        <!-- <h1> = título principal da página, o mais importante -->
+        <!-- id="titulo" dá um nome ÚNICO pra essa tag, pra eu poder estilizar ela sozinha no CSS -->
+        <h1 id="titulo">Jéssica</h1>
+
+        <!-- <p> = parágrafo de texto normal -->
+        <!-- class="subtitulo" dá um nome que pode ser REUTILIZADO em várias tags -->
+        <p class="subtitulo">Estudante de Desenvolvimento de Jogos Digitais</p>
+
+    </header>
+
+    <!-- <main> = conteúdo principal da página (tag semântica) -->
+    <main>
+
+        <!-- <img> insere uma imagem. Não tem tag de fechamento -->
+        <!-- src = caminho/nome do arquivo da imagem -->
+        <!-- alt = texto alternativo, aparece se a imagem não carregar (importante pra acessibilidade) -->
+        <img src="foto.jpg" alt="Foto de perfil de Jéssica" class="foto-perfil">
+
+        <!-- <div> = uma "caixa" genérica pra AGRUPAR conteúdo relacionado -->
+        <div class="sobre">
+
+            <!-- <h2> = subtítulo, um nível abaixo do h1 -->
+            <h2>Sobre mim</h2>
+
+            <p>Gosto de estudar programação e desenvolvimento de jogos.</p>
+
+        </div>
+
+        <div class="hobbies">
+
+            <h2>Hobbies</h2>
+
+            <!-- <ul> = lista SEM ordem (aparece com bolinhas) -->
+            <ul>
+                <!-- <li> = cada item da lista, sempre dentro de <ul> ou <ol> -->
+                <li>Jogos</li>
+                <li>Desenho</li>
+                <li>Programação</li>
+            </ul>
+
+        </div>
+
+        <div class="links">
+
+            <h2>Redes sociais</h2>
+
+            <!-- <a href=""> cria um link. O texto entre as tags é o que fica clicável -->
+            <a href="#" class="link-social">Instagram</a>
+
+            <!-- <span> = uma "caixa" genérica EM LINHA, pra destacar um pedacinho de texto -->
+            <span> | </span>
+
+            <a href="#" class="link-social">LinkedIn</a>
+
+        </div>
+
+    </main>
+
+    <!-- <footer> = rodapé da página (tag semântica) -->
+    <footer>
+        <!-- &copy; é o símbolo © escrito em código -->
+        <p>&copy; 2026 Jéssica. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

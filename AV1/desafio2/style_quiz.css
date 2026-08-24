@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color:#FDEB9E ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+
+}
+
+.quiz-card{
+    background-color: #B5B9F0;
+    color: #FFF1F1;
+    max-width: 700px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba (0,0,0.4);
+
+}
+
+.quiz-card h2{
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+
+input[type="radio"]{
+    display: none;
+    
+}
+
+
+label{
+    display:block;
+    background-color: #8CCDEB;
+    color: #e2e2e8;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    border: 2px solid transparent;
+}
+
+label:hover {
+    background-color: #49495a;
+    transform: translateY(-2px);
+}
+
+
+.feedback,
+.btn-nav {
+    display: none;
+}
+
+.feedback {
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 16px;
+}
+
+.feedback-correct {
+    background-color: rgba(65, 177, 95, 0.2);
+    color: #41b15f;
+    border: 1px solid #41b15f;
+}
+
+.feedback-wrong {
+    background-color: rgba(195, 54, 33, 0.2);
+    color: #ff6b6b;
+    border: 1px solid #c33621;
+}
+
+
+.btn-nav {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #41b15f;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    text-align: center;
+    transition: opacity 0.2s ease;
+}
+
+.btn-nav:hover {
+    opacity: 0.9;
+}
+
+
+#correct:checked + label {
+    background-color: #41b15f;
+    color: #ffffff;
+}
+
+#correct:checked ~ .feedback-correct {
+    display: block;
+}
+
+#correct:checked ~ .btn-nav {
+    display: block;
+}
+
+
+#wrong1:checked + label,
+#wrong2:checked + label {
+    background-color: #c33621;
+    color: #ffffff;
+}
+
+#wrong1:checked ~ .feedback-wrong,
+#wrong2:checked ~ .feedback-wrong {
+    display: block;
+}

@@ -1,0 +1,67 @@
+/* Cada bloco abaixo segue o formato: seletor { propriedade: valor; } */
+
+/* Seletor de TAG: aplica a TODA a tag <body> (a página inteira) */
+body {
+    font-family: Arial, sans-serif;  /* fonte usada em todo o texto da página */
+    margin: 0;                       /* remove a margem padrão que o navegador coloca sozinho */
+    background-color: #f4f4f4;       /* cor de fundo cinza clara pra página toda */
+}
+
+/* Seletor de TAG: aplica a TODO <header> da página */
+header {
+    background-color: #6a5acd;  /* cor de fundo roxa do cabeçalho */
+    color: white;                /* cor do texto dentro do header */
+    padding: 20px;               /* espaço INTERNO, entre o texto e a borda da caixa */
+    text-align: center;          /* centraliza o texto */
+}
+
+/* Seletor de ID (#): aplica SÓ ao elemento com id="titulo" */
+/* como id é único, esse estilo nunca "vaza" pra outro elemento */
+#titulo {
+    font-size: 32px;  /* tamanho da fonte do título */
+}
+
+/* Seletor de CLASSE (.): aplica a QUALQUER elemento com class="subtitulo" */
+.subtitulo {
+    font-size: 16px;
+    opacity: 0.9;  /* deixa o texto levemente transparente */
+}
+
+main {
+    padding: 20px;        /* espaço interno do conteúdo principal */
+    max-width: 600px;     /* largura máxima, pra não esticar demais em telas grandes */
+    margin: 0 auto;       /* centraliza o bloco horizontalmente na página */
+}
+
+.foto-perfil {
+    width: 120px;                  /* tamanho da imagem */
+    border-radius: 50%;            /* arredonda a imagem até virar um círculo */
+    border: 3px solid #6a5acd;     /* borda roxa ao redor da imagem */
+    display: block;
+    margin: 0 auto 20px auto;      /* centraliza a imagem e dá espaço embaixo dela */
+}
+
+/* Seletor MÚLTIPLO: a vírgula aplica o mesmo estilo pras 3 classes de uma vez */
+.sobre, .hobbies, .links {
+    margin-bottom: 20px;  /* espaço embaixo de cada bloco, separando um do outro */
+}
+
+h2 {
+    color: #6a5acd;                    /* cor roxa dos subtítulos */
+    border-bottom: 2px solid #6a5acd;  /* linha roxa embaixo do subtítulo */
+    padding-bottom: 5px;               /* espaço entre o texto e a linha */
+}
+
+.link-social {
+    color: #6a5acd;            /* cor dos links */
+    text-decoration: none;     /* remove o sublinhado padrão do link */
+    font-weight: bold;         /* deixa o texto em negrito */
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;    /* cinza bem escuro */
+    color: white;
+    margin-top: 30px;          /* espaço ACIMA do rodapé, separando do resto da página */
+}
