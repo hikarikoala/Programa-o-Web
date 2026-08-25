@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  user-select: none;
+  /* Inicializa a pontuação */
+  counter-reset: score 0;
+}
+
+h1 {
+  margin-bottom: 6px;
+  font-size: 24px;
+}
+
+p.subtitle {
+  color: rgb(241, 30, 86);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+/* Cada clique soma +10 pontos */
+input[type="checkbox"]:checked {
+  counter-increment: score 10;
+}
+
+/* Painel do Topo (Pontuação e Tempo) */
+.dashboard {
+  width: 420px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e293b;
+  padding: 12px 18px;
+  border-radius: 9px 9px 0 0;
+  border: 2px solid rgb(241, 30, 86);
+  border-bottom: none;
+}
+
+.score-box {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.score-value::after {
+  content: counter(score);
+  color: rgb(241, 30, 86);
+  font-size: 18px;
+}
+
+.timer-bar {
+  width: 140px;
+  height: 10px;
+  background: #334155;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.timer-fill {
+  height: 100%;
+  background: #e11d48;
+  width: 100%;
+  animation: countdown 8s linear forwards;
+}
+
+@keyframes countdown {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
+/* Arena do Jogo */
+.arena {
+  position: relative;
+  width: 420px;
+  height: 380px;
+  background: #020617;
+  border-radius: 0 0 9px 9px;
+  border: 2px solid rgb(241, 30, 86);
+  overflow: hidden;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.target-wrap {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  will-change: top, left;
+}
+
+.target {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, #f43f5e 30%, #fff 31%, #fff 60%, #e11d48 61%);
+  border-radius: 50%;
+  cursor: crosshair;
+  box-shadow: 0 0 15px rgba(250, 73, 103, 0.6);
+  transition: transform 0.1s ease;
+}
+
+.target:hover {
+  transform: scale(1.1);
+}
+
+input[type="checkbox"]:checked + .target-wrap {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0);
+  transition: opacity 0.15s, transform 0.15s;
+}
+
+/* Animações e rotas dos alvos */
+.t1 { animation: move1 4s ease-in-out infinite alternate; }
+.t2 { animation: move2 3.2s ease-in-out infinite alternate; animation-delay: 0.3s; }
+.t3 { animation: move3 5s ease-in-out infinite alternate; animation-delay: 0.7s; }
+.t4 { animation: move4 4.7s ease-in-out infinite alternate; animation-delay: 1.1s; }
+.t5 { animation: move5 3s ease-in-out infinite alternate; animation-delay: 0.5s; }
+
+@keyframes move1 {
+  0% { top: 30px; left: 30px; }
+  50% { top: 260px; left: 160px; }
+  100% { top: 80px; left: 330px; }
+}
+
+@keyframes move2 {
+  0% { top: 280px; left: 50px; }
+  50% { top: 60px; left: 250px; }
+  100% { top: 220px; left: 330px; }
+}
+
+@keyframes move3 {
+  0% { top: 140px; left: 325px; }
+  50% { top: 40px; left: 180px; }
+  100% { top: 270px; left: 120px; }
+}
+
+@keyframes move4 {
+  0% { top: 60px; left: 180px; }
+  50% { top: 180px; left: 25px; }
+  100% { top: 300px; left: 260px; }
+}
+
+@keyframes move5 {
+  0% { top: 200px; left: 150px; }
+  50% { top: 30px; left: 80px; }
+  100% { top: 160px; left: 300px; }
+}
+
+/* Tela de fim de jogo (Game Over) */
+.game-over-screen {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  opacity: 0;
+  pointer-events: none;
+  animation: showGameOver 0.1s 12s forwards;
+  z-index: 20;
+}
+
+@keyframes showGameOver {
+  to {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.game-over-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #f43f5e;
+}
+
+.final-score {
+  font-size: 18px;
+  color: #38bdf8;
+}
+
+.final-score::after {
+  content: counter(score) " pts";
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+.btn-reset {
+  margin-top: 10px;
+  padding: 8px 18px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.btn-reset:hover {
+  background: #1d4ed8;
+}

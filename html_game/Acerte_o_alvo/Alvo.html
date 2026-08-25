@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_alvo.css">
+    <title>Acerte o Alvo Puro CSS</title>
+</head>
+<body>
+    
+    <h1>Acerte o Alvo</h1>
+    <p class="subtitle">Clique no maior número de alvos antes que o tempo acabe</p>
+    
+    <!---Painel de Pontuação e Timer-->
+   <div class="dashboard">
+    <div class="score-box">
+      Placar: <span class="score-value"></span>
+    </div>
+    <div class="timer-bar">
+      <div class="timer-fill"></div>
+    </div>
+   </div>
+
+  <!--Arena com os Alvos-->
+  <div class="arena">
+
+    <!--Alvo 1-->
+    <input type="checkbox" id="t1">
+    <div class="target-wrap t1">
+        <label for="t1" class="target"></label>
+    </div>
+
+    <!--Alvo 2-->
+    <input type="checkbox" id="t2">
+    <div class="target-wrap t2">
+        <label for="t2" class="target"></label>
+    </div>
+
+    <!--Alvo 3-->
+    <input type="checkbox" id="t3">
+    <div class="target-wrap t3">
+        <label for="t3" class="target"></label>
+    </div>
+
+     <!--Alvo 4-->
+    <input type="checkbox" id="t4">
+    <div class="target-wrap t4">
+        <label for="t4" class="target"></label>
+    </div>
+
+     <!--Alvo 5-->
+    <input type="checkbox" id="t5">
+    <div class="target-wrap t5">
+        <label for="t5" class="target"></label>
+    </div>
+
+    <!--Tela de Fim de Jogo-->
+    <div class="game-over-screen">
+        <div class="game-over-title">Fim de Jogo!🎯</div>
+        <div class="final-score">Sua pontuação</div>
+        <a href="" class"btn-resert">Jogar Novamente</a>
+
+    </div>
+
+    
+  </div>
+
+</body>
+</html>
