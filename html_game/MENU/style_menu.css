@@ -1,0 +1,99 @@
+*/Corpo da pagina estrutura*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+body{
+    background: #0f172a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+}
+
+.title{
+    color: #f8fafc;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+
+.game-grid{
+    display:flex;
+    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 850px;
+
+}
+
+.game-card{
+    background: #1e293b;
+    border-radius: 16px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #94a3b8;
+    border: 2px solid transparent;
+    transition: all 0.3s case;
+
+}
+
+
+.game-card span{
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    text-align: center;
+}
+
+.game-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20 px rgba(0, 0, 0, 0.4);
+
+}
+
+.game-card.maze:hover{
+    border-color: #38bdf8;
+    background: #0c4a6e;
+
+}
+
+.game-card.maze:hover i{color:#38bdf8; transform: scale(1.1);}
+
+.game-card.quiz:hover{
+    border-color: blueviolet;
+    background: #581c87;
+
+}
+
+.game-card.quiz:hover i{color:blueviolet; transform: scale(1.1);}
+
+
+.game-card.minesweeper:hover{
+    border-color: #f87171;
+    background: #7f1d1d;
+
+}
+
+.game-card.minesweeper:hover i{color:#f87171; transform: scale(1.1);}
+
+.game-card.heart:hover{
+    border-color: #f60592;
+    background: #9d0362;
+
+}
+
+.game-card.heart:hover i{color:#f60592; transform: scale(1.1);}
