@@ -14,6 +14,7 @@ let fraseSorteada;
 //Constantes Referentes aos id encontrados no html
 const resultDiv=document.getElementById("result");
 const restartBtn=document.getElementById("restart");
+const classesOriginais = ["btn-pink", "btn-purple", "btn-blue"];
 const classesOriginais=document.querySelectorAll(".btn-choice");
 
 function iniciarjogo(){
