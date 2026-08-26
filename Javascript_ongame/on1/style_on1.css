@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f0f4ff 0%, #fae8ff 50%, #fef3c7 100%);
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 36px 28px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08), 0 5px 15px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  max-width: 480px;
+  width: 100%;
+  border: 1px solid #e2e8f0;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ec4899, #8b5cf6, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+
+p.subtitle {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 28px;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.btn-choice {
+  flex: 1;
+  padding: 16px 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  color: #ffffff;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Cores individuais dos botões */
+.btn-pink {
+  background: linear-gradient(135deg, #f43f5e, #ec4899);
+}
+
+.btn-purple {
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+}
+
+.btn-blue {
+  background: linear-gradient(135deg, #06b6d4, #3b82f6);
+}
+
+.btn-choice:hover:not(:disabled) {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.btn-choice:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Estados de acerto e erro */
+.btn-choice.correct {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+  transform: scale(1.05);
+  box-shadow: 0 0 0 4px #a7f3d0, 0 8px 16px rgba(16, 185, 129, 0.3) !important;
+}
+
+.btn-choice.wrong {
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  color: #ffffff !important;
+  opacity: 0.9 !important;
+  box-shadow: 0 0 0 4px #fecaca !important;
+}
+
+#result {
+  min-height: 60px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.restart-btn {
+  background: linear-gradient(135deg, #f59e0b, #ea580c);
+  color: #ffffff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: none;
+  margin: 0 auto;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.3);
+  transition: all 0.2s ease;
+}
+
+.restart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(234, 88, 12, 0.4);
+}

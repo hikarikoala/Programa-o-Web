@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinhe o Botão</title>
+    <link rel="stylesheet" href="style_on1.css">
+</head>
+<body>
+    <div class="card">
+        <h1> Adivinhe o Botão</h1>
+        <p class="subtitle"> Apenas um dos botões guarda uma mensagem inspiradora.</p>
+
+        <div class="buttons-container">
+            <button class="btn-continer btn-pink" onclick="verificarEscolha(0)"> Opçaõ 1</button>
+            <button class="btn-continer btn-purple" onclick="verificarEscolha(1)"> Opçaõ 2</button>
+            <button class="btn-continer btn-blue" onclick="verificarEscolha(2)"> Opçaõ 3</button>
+        </div>
+
+        <div id="result"></div>
+        <button id="restart" class="restart-btn" onclick="iniciarJogo"> Tentar Novamente</button>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
