@@ -1,27 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adivinhe o Botão</title>
+    <title>Adivinhe o botão Secreto</title>
     <link rel="stylesheet" href="style_on1.css">
 </head>
 <body>
     <div class="card">
-        <h1> Adivinhe o Botão</h1>
-        <p class="subtitle"> Apenas um dos botões guarda uma mensagem inspiradora.</p>
+        <h1>Adivinhe o Botão</h1>
+        <p class="subtitle">Apenas um dos botões guarda uma mensagem inspiradora.</p>
 
         <div class="buttons-container">
-            <button class="btn-continer btn-pink" onclick="verificarEscolha(0)"> Opçaõ 1</button>
-            <button class="btn-continer btn-purple" onclick="verificarEscolha(1)"> Opçaõ 2</button>
-            <button class="btn-continer btn-blue" onclick="verificarEscolha(2)"> Opçaõ 3</button>
+            <button class="btn-choice btn-pink" onclick="verificarEscolha(0)">Opção 1</button>
+            <button class="btn-choice btn-purple" onclick="verificarEscolha(1)">Opção 2</button>
+            <button class="btn-choice btn-blue" onclick="verificarEscolha(2)">Opção 3</button>
+            
         </div>
 
         <div id="result"></div>
-        <button id="restart" class="restart-btn" onclick="iniciarJogo"> Tentar Novamente</button>
+
+        <button id="restart" class="restart-btn" onclick="iniciaJogo">Tentar Novamente</button>
 
 
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
