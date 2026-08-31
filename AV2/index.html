@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Painel de Produtividade & Utilidades</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+  
+  <style>
+    
+    .btn-sem-borda {
+      background: transparent;
+      border: none;
+      color: var(--text-main);
+      font-weight: bold;
+    }
+    .btn-sem-borda:hover {
+      background-color: var(--border-color);
+    }
+    .row-inputs {
+      display: flex;
+      gap: 15px;
+      margin-top: 5px;
+    }
+    .row-inputs > div {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="card" style="max-width: 500px; width: 100%; margin: 20px auto; padding-bottom: 40px;">
+    
+    
+    <header class="card-header">
+      <h1 class="card-title">Meu Painel de Produtividade & Utilidades</h1>
+      <p class="card-subtitle">Aplicação Integrada com JavaScript</p>
+      <div style="margin-top: 15px;">
+        <button id="btn-tema" class="btn btn-sem-borda">🌙 Ativar Modo Escuro</button>
+      </div>
+    </header>
+
+    <section style="margin-top: 30px;">
+      <div class="form-group">
+        <label class="form-label" for="campo-nome">Seu Nome / Frase</label>
+        <input type="text" id="campo-nome" class="input-field" placeholder="Digite seu nome ou texto...">
+      </div>
+      
+      <div class="text-center" style="margin-top: 15px;">
+        <button id="btn-saudacao" class="btn">Saudar</button>
+        <p id="txt-saudacao" style="margin-top: 10px; font-weight: bold; min-height: 20px;"></p>
+        <p class="text-muted" style="margin-top: 5px;">Total de caracteres: <strong id="contagem-caracteres">0</strong></p>
+      </div>
+    </section>
+
+    <section style="margin-top: 30px;">
+      <div id="display-contador" class="counter-display text-muted text-center" style="margin-bottom: 10px;">0</div>
+      
+      <div class="btn-group" style="align-items: center; justify-content: center; gap: 20px;">
+        <button id="btn-diminuir" class="btn btn-danger">- Diminuir</button>
+        <button id="btn-zerar" class="btn btn-sem-borda">Zerar</button>
+        <button id="btn-aumentar" class="btn btn-success">+ Aumentar</button>
+      </div>
+    </section>
+
+   
+    <section style="margin-top: 40px;">
+      <div class="form-group">
+        <label class="form-label" for="tarefa-input">Nova Tarefa</label>
+        <input type="text" id="tarefa-input" class="input-field" placeholder="Digite a tarefa...">
+      </div>
+      
+      <div class="btn-group" style="justify-content: flex-start; margin-top: 10px; gap: 20px; align-items: center;">
+        <button id="btn-add-tarefa" class="btn btn-success">+ Adicionar Tarefa</button>
+        <button id="btn-dica" class="btn btn-sem-borda">Mostrar Dica</button>
+      </div>
+      
+      <p id="txt-dica" class="text-muted" style="display: none; margin-top: 10px; font-size: 0.9rem;">
+        Dica: continue praticando!
+      </p>
+      <ul id="lista-tarefas" class="task-list" style="margin-top: 15px;"></ul>
+    </section>
+
+    <section style="margin-top: 40px;">
+      <div class="row-inputs">
+        <div class="form-group">
+          <label class="form-label text-center" for="calc-v1">Valor A</label>
+          <input type="number" id="calc-v1" class="input-field">
+        </div>
+        <div class="form-group">
+          <label class="form-label text-center" for="calc-v2">Valor B</label>
+          <input type="number" id="calc-v2" class="input-field">
+        </div>
+      </div>
+      
+      <div class="btn-group" style="margin-top: 15px; align-items: center; justify-content: center; gap: 15px;">
+        <button id="btn-somar" class="btn btn-success">Somar (+)</button>
+        <button id="btn-subtrair" class="btn btn-danger">Subtrair (-)</button>
+        <button id="btn-dividir" class="btn btn-sem-borda">Dividir (÷)</button>
+      </div>
+      
+      <p class="text-center" style="margin-top: 15px; font-weight: bold;">Resultado: <span id="resultado-calc">0</span></p>
+      
+      <div id="bloco-cor" class="color-preview" style="margin-top: 20px; background-color: var(--primary); color: #fff; width: 100%;">Azul</div>
+      
+      <div class="btn-group" style="margin-top: 15px; display: flex; width: 100%; gap: 10px;">
+        <button id="btn-cor-blue" class="btn" style="flex: 1; padding: 10px 0;">Azul</button>
+        <button id="btn-cor-green" class="btn btn-success" style="flex: 1; padding: 10px 0;">Verde</button>
+        <button id="btn-cor-red" class="btn btn-danger" style="flex: 1; padding: 10px 0;">Vermelho</button>
+        <button id="btn-cor-purple" class="btn btn-roxo" style="flex: 1; padding: 10px 0;">Roxo</button>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
